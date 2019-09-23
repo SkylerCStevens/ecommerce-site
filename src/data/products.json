@@ -1,0 +1,211 @@
+
+     [{
+      "id": 1,
+      "imgURL": "https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__ha-1d87d0b1b018b27a__hmac-d52ebb17c7024b6f432093b49376064c24278b12/images/items/350/JagCV70SG.jpg",
+      "imgAlt": "Surf Green Jaguar guitar with tortoiseshell pickguard and block inlays",
+      "brand": "squier",
+      "type": "electric",
+      "name": "Squier Classic Vibe Jaguar",
+      "price":399,
+      "description": "Poplar body, Maple Neck, Indian Laurel Fretboard, 2 Single Coil Pickups, Vintage Floating Tremolo"
+    },
+    {
+      "id": 2,
+      "imgURL": "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-8775554beca80595__hmac-c611052dcc1ac5bda37bf6970ab76e506ee5a23d/images/items/350/S2SCHV7SR.jpg.auto.webp",
+      "imgAlt": "PRS S2 Singlecut Semi-Hollow with a red flame maple top and traditional bird inlays",
+      "brand": "prs",
+      "type": "electric",
+      "name": "PRS S2 Singlecut Semi-Hollow",
+      "price":1799,
+      "description": "Semi-Hollow Mahogany Body, Flame Maple Top, Mahogany Neck, Rosewood Fretboard, 2 Humbucker Pickups"
+    },
+    {
+      "id": 3,
+      "imgURL": "https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__ha-b7814aa779551c7e__hmac-c72de656d5282c23abe4d5bd48b8fa832eafa4ae/images/items/350/LEC1000ETSBK.jpg",
+      "imgAlt": "ESP LTD EC-1000 with an Evertune bridge with a black flame maple top",
+      "brand": "ltd",
+      "type": "electric",
+      "name": "ESP LTD EC-1000ET Evertune",
+      "price":1099,
+      "description": "Mahogany Body, Flame Maple Top, Mahogany Neck, Ebony Fretboard, 2 Humbucker Pickups, Evertune Bridge"
+    },
+    {
+      "id": 4,
+      "imgURL": "https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__ha-49b25053df8fc674__hmac-beda755c5e76ec96f96d5007c9158d21939b4709/images/items/350/414ceRVCl.jpg",
+      "imgAlt": "Taylor 414ce-R acoustic guitar",
+      "brand": "taylor",
+      "type": "acoustic",
+      "name": "Taylor 414ce-R",
+      "price":2499,
+      "description": "Sitka Spruce Top, Rosewood Back and Sides, Mahogany Neck, Ebony Fretboard, Taylor ES2 Electronics"
+    },
+    {
+      "id": 5,
+      "imgURL": "https://media.sweetwater.com/api/i/b-original__w-300__h-450__bg-ffffff__q-85__ha-d24dc65c05a5f08a__hmac-6647d9550c6738a86da8636a6e0a0b35cf48002b/images/items/750/ENOLTQCH-large.jpg",
+      "imgAlt": "Light Blue Epiphone Les Paul SL",
+      "brand": "epiphone",
+      "type": "electric",
+      "name": "Epiphone Les Paul SL",
+      "price":119,
+      "description": "Poplar Body, Mahogany Neck, Rosewood Fretboard, 2 Single Coil Pickups"
+    },
+    {
+      "id": 6,
+      "imgURL": "https://images.reverb.com/image/upload/s--CGK-43tw--/f_auto,t_large/v1555647612/sdq5qkxehrl6lp05enyb.jpg",
+      "imgAlt": "Targaryen House themed Fender Stratocaster",
+      "brand": "fender",
+      "type": "electric",
+      "name": "Fender House Targaryen Strat",
+      "price":35000,
+      "description": "2 Piece Alder Body, Maple Neck, Ebony Fretboard, 3 Single Coil Pickups, Vintge Style Synchcronized Tremolo, Dragon Scale Carved Top, Dragon Sigil on First Fret"
+    },
+    {
+      "id": 7,
+      "imgURL": "https://media.musicarts.com/is/image/MMGS7/L19048000001000-00-600x600.jpg",
+      "imgAlt": "Brown Stain D'Angelico acoustic guitar",
+      "brand": "dangelico",
+      "type": "acoustic",
+      "name": "D'Angelico Premier Gramercy",
+      "price":499,
+      "description": "Solid Sitka Spruce Top, Laminated Mahogany Back and Sides, Sonokeline Fretboard, Mahogany Neck, D'Angelico Preamp and Pickup"
+    },
+    {
+      "id": 8,
+      "imgURL": "https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__ha-32c91e6937675cd4__hmac-b5999cec3b0c86f043112a0ee9c1c9e649c2148c/images/items/350/TeleAEThMMIB.jpg",
+      "imgAlt": "Light Blue American Elite Fender Thinline tele",
+      "brand": "fender",
+      "type": "electric",
+      "name": "Fender American Elite Tele Thinline",
+      "price":1999,
+      "description": "Semi-Hollow Ash Body, Maple Neck, Maple Fretboard, 2 Singlecoil Pickups"
+    },
+    {
+      "id": 9,
+      "imgURL": "https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__ha-5742423f55917e72__hmac-97faf17b26ec54e62c67b3b027aa22488a0fd242/images/items/350/StratPHSSTPTBS.jpg",
+      "imgAlt": "Sunburst flame maple top on Fender Player Stratocaster",
+      "brand": "fender",
+      "type": "electric",
+      "name": "Fender Player Stratocaster Plus Top",
+      "price":699,
+      "description": "Alder Body, Flame Maple Top, Maple Neck, Pau Ferro Fretboard, HSS pickups"
+    },
+    {
+      "id": 10,
+      "imgURL": "https://media.sweetwater.com/api/i/b-original__w-300__h-450__bg-ffffff__q-85__ha-93d39aec38d5ff2f__hmac-c1bc6e6c8319474c1cd535c87cd66da8e0bf9acd/images/items/750/McCty594APBGW-large.jpg",
+      "imgAlt": "PRS McCarty 594 with a Black Gold Burst Flame maple top",
+      "brand": "prs",
+      "type": "electric",
+      "name": "RS McCarty 594",
+      "price":5200,
+      "description": "Mahogany Body, Flame Maple Top, Mahogany Neck, Ebony Fretboard, 2 Humbucker Pickups"
+    },
+    {
+      "id": 11,
+      "imgURL": "https://media.sweetwater.com/api/i/b-original__w-300__h-450__bg-ffffff__q-85__ha-b3a083582170bf5f__hmac-ae510c24ed2041a86585f0e9f70baf451cea14d9/images/items/750/D45Y8-large.jpg",
+      "imgAlt": "Martin D-45 with a natural finish",
+      "brand": "martin",
+      "type": "acoustic",
+      "name": "Martin D-45",
+      "price":8999,
+      "description": "Sitka Spruce Top, East Indian Rosewood Back and Sides, Mahogany Neck, Ebony Fretboard"
+    },
+    {
+      "id": 12,
+      "imgURL": "https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__ha-323332f2c03bff93__hmac-853b4854efec80d3afc82921aa0663ea99eea5a5/images/items/350/STRATJHMUV.jpg",
+      "imgAlt": "Jimi Hendrix Signature Ultraviolet Stratocaster",
+      "brand": "fender",
+      "type": "electric",
+      "name": "Fender Jimi Hendrix Strat",
+      "price":924,
+      "description": "Alder Body, Maple Neck, Maple Fretboard, 3 Single Coil Pickups, Reverse Headstock"
+    },
+    {
+      "id": 13,
+      "imgURL": "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-69bf220e866ab0ff__hmac-127266c1e6327d90b90d915459147952741ad560/images/items/750/JR1-large.jpg.auto.webp",
+      "imgAlt": "Sunburst Yamaha JR1 acoustic guitar",
+      "brand": "yamaha",
+      "type": "acoustic",
+      "name": "Yamaha JR1",
+      "price":134,
+      "description": "Spruce Top, Meranti Back and Sides, Nato Neck, Rosewood Fretboard"
+    },
+    {
+      "id": 14,
+      "imgURL": "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-c7487a678f9c34dd__hmac-da898a5df066cc7620cedf180846e6024815dfaf/images/items/750/00017EBS-large.jpg.auto.webp",
+      "imgAlt": "Martin 000-17E Black Acoustic Guitar with White Pickguard",
+      "brand": "martin",
+      "type": "acoustic",
+      "name": "Martin 000-17E",
+      "price":1759,
+      "description": "Sitka Spruce Top, Mahogany Back and Sides, Hardwood Neck, Rosewood Fretboard, Martin On-board Electronics"
+    },
+    {
+      "id": 15,
+      "imgURL": "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-de0501e83130b63b__hmac-3f7b9c8174c37a9e37afe646401a02dbb503bec2/images/items/750/JPM6DR-large.jpg.auto.webp",
+      "imgAlt": "Ernie Ball John Petrucci Majesty Dark Brown Flame Maple Top",
+      "brand": "ernie-ball",
+      "type": "electric",
+      "name": "Ernie Ball John Petrucci Majesty",
+      "price":3499,
+      "description": "Mahogany Body, Maple Cap, Mahogany Neck, Ebony Fretboard, 2 Humbuckers and 1 Piezo Pickup, Tremolo"
+    },
+    {
+      "id": 16,
+      "imgURL": "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-eeb94ac921f392a0__hmac-4fb2c1716a33a50137295d6c9edbf027de42d81f/images/items/750/TeleASMAW-large.jpg.auto.webp",
+      "imgAlt": "Cream Colored Squier Affinity Tele",
+      "brand": "squier",
+      "type": "electric",
+      "name": "Squier Affinity Tele",
+      "price":199,
+      "description": "Alder Body, Maple Neck, Maple Fretboard, 2 Single Coil Pickups"
+    },
+    {
+      "id": 17,
+      "imgURL": "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-95d82ffc377c0b87__hmac-95eda42fddb4d73f0b2a55a883dfbe4a2b46efc9/images/items/750/GRX70QATBB-large.jpg.auto.webp",
+      "imgAlt": "Ibanez GIO GRX70QA with a blue burst quilted maple top",
+      "brand": "ibanez",
+      "type": "electric",
+      "name": "Ibanez GIO GRX70QA",
+      "price":199,
+      "description": "Poplar Body, Quilted Maple Top, Maple Neck, Treated Pine Fretboard, 2 Humbucker and 1 Single Coil Pickups"
+    },
+    {
+      "id": 18,
+      "imgURL": "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-4b6906dafb80478e__hmac-2bda54ebaedb8c0a5b1e1bdee229d41926a0a09f/images/items/350/TeleCV70TLN.jpg.auto.webp",
+      "imgAlt": "Squier Classic Vibe Tele Thinline with a natural finish",
+      "brand": "squier",
+      "type": "electric",
+      "name": "Squier Classic Vibe '72 Tele Thinline",
+      "price":399,
+      "description": "Chambered Soft Maple Body, Maple Neck, Maple Fretboard, 2 Humbucker Pickups"
+    },
+    {
+      "id": 19,
+      "imgURL": "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-3c30721521f5953d__hmac-649eef9a117ac28e8d00d0659699c60f9b3126df/images/items/350/SEMTGB2.jpg.auto.webp",
+      "imgAlt": "Black Flame Maple PRS SE Mark Tremonti Custom Singlecut",
+      "brand": "prs",
+      "type": "electric",
+      "name": "PRS SE Mark Tremonti Singlecut",
+      "price":779,
+      "description": "Mahogany Body, Flame Maple Top, Mahogany Neck, Rosewood Fretboard, 2 Humbucker Pickups"
+    },
+    {
+      "id": 20,
+      "imgURL": "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-cf5c391ced663be1__hmac-b7846da7aea4a95ab6de1d988f9cd09e4df397a3/images/items/350/StVincentSB.jpg.auto.webp",
+      "imgAlt": "Black 3 Humbucker St. Vincent Signature Guitar",
+      "brand": "ernie-ball",
+      "type": "electric",
+      "name": "Ernie Ball St. Vincent Signature",
+      "price":2449,
+      "description": "Mahogany Body, Rosewood Neck, Ebony Fretboard, 3 Mini-Humbucker Pickups"
+    },
+    {
+      "id": 21,
+      "imgURL": "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-b06724169d1ef5b3__hmac-a3ec75161cf295f47d398f8f02c56aa254e47991/images/items/750/SE245WB-large.jpg.auto.webp",
+      "imgAlt": "PRS SE 245 whale blue flame maple top",
+      "brand": "prs",
+      "type": "electric",
+      "name": "PRS SE 245",
+      "price":739,
+      "description": "Mahogany Body, Flame Maple Top, Mahogany Neck, Rosewood Fretboard, 2 humbucker Pickups"
+    }]
