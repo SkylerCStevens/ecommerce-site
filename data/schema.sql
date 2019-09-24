@@ -83,7 +83,7 @@ VALUES ("Fender", "Brad Smith", "Amazing Music Warehouse", "123 Music Street, Lo
 ("Ernie Ball", "Gareth Whittle", "Extreme Speed Warehouse", "4938 Platinum Street, Las Vegas, Nevada");
 
 INSERT INTO products (product_name, img_url, img_alt, guitar_type, product_details, quantity, brand_id, price_id)
-VALUES ("Squier Classic Vibe Jaguar", "https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__ha-1d87d0b1b018b27a__hmac-d52ebb17c7024b6f432093b49376064c24278b12/images/items/350/JagCV70SG.jpg", "Surf Green Jaguar guitar with tortoiseshell pickguard and block inlays", "electric", "Poplar body, Maple Neck, Indian Laurel Fretboard, 2 Single Coil Pickups, Vintage Floating Tremolo", 100, 2, 4),
+VALUES ("Squier Classic Vibe Jaguar", "https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__ha-1d87d0b1b018b27a__hmac-d52ebb17c7024b6f432093b49376064c24278b12/images/items/350/JagCV70SG.jpg", "Surf Green Jaguar guitar with tortoiseshell pickguard and block inlays", "electric", "Poplar body, Maple Neck, Indian Laurel Fretboard, 2 Single Coil Pickups, Vintage Floating Tremolo", 80, 2, 4),
 
 ("PRS S2 Singlecut Semi-Hollow", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-8775554beca80595__hmac-c611052dcc1ac5bda37bf6970ab76e506ee5a23d/images/items/350/S2SCHV7SR.jpg.auto.webp", "PRS S2 Singlecut Semi-Hollow with a red flame maple top and traditional bird inlays", "electric", "Semi-Hollow Mahogany Body, Flame Maple Top, Mahogany Neck, Rosewood Fretboard, 2 Humbucker Pickups", 15, 4, 12),
 
@@ -112,3 +112,15 @@ VALUES ("Squier Classic Vibe Jaguar", "https://media.sweetwater.com/api/i/b-orig
 ("Martin 000-17E", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-c7487a678f9c34dd__hmac-da898a5df066cc7620cedf180846e6024815dfaf/images/items/750/00017EBS-large.jpg.auto.webp", "Martin 000-17E Black Acoustic Guitar with White Pickguard", "acoustic", "Sitka Spruce Top, Mahogany Back and Sides, Hardwood Neck, Rosewood Fretboard, Martin On-board Electronics", 15, 6, 11),
 
 ("Ernie Ball John Petrucci Majesty", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-de0501e83130b63b__hmac-3f7b9c8174c37a9e37afe646401a02dbb503bec2/images/items/750/JPM6DR-large.jpg.auto.webp", "Ernie Ball John Petrucci Majesty Dark Brown Flame Maple Top", "electric", "Mahogany Body, Maple Cap, Mahogany Neck, Ebony Fretboard, 2 Humbuckers and 1 Piezo Pickup, Tremolo", 8, 11, 16)
+
+("Squier Affinity Tele", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-eeb94ac921f392a0__hmac-4fb2c1716a33a50137295d6c9edbf027de42d81f/images/items/750/TeleASMAW-large.jpg.auto.webp", "Cream Colored Squier Affinity Tele", "electric", "Alder Body, Maple Neck, Maple Fretboard, 2 Single Coil Pickups", 120, 2, 3),
+
+("Ibanez GIO GRX70QA", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-95d82ffc377c0b87__hmac-95eda42fddb4d73f0b2a55a883dfbe4a2b46efc9/images/items/750/GRX70QATBB-large.jpg.auto.webp", "Ibanez GIO GRX70QA with a blue burst quilted maple top", "electric", "Poplar Body, Quilted Maple Top, Maple Neck, Treated Pine Fretboard, 2 Humbucker and 1 Single Coil Pickups", 60, 5, 3),
+
+("Squier Classic Vibe '72 Tele Thinline", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-4b6906dafb80478e__hmac-2bda54ebaedb8c0a5b1e1bdee229d41926a0a09f/images/items/350/TeleCV70TLN.jpg.auto.webp", "Squier Classic Vibe Tele Thinline with a natural finish", "electric", "Chambered Soft Maple Body, Maple Neck, Maple Fretboard, 2 Humbucker Pickups", 60, 2, 4)
+
+("PRS SE Mark Tremonti Singlecut", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-3c30721521f5953d__hmac-649eef9a117ac28e8d00d0659699c60f9b3126df/images/items/350/SEMTGB2.jpg.auto.webp", "Black Flame Maple PRS SE Mark Tremonti Custom Singlecut", "electric", "Mahogany Body, Flame Maple Top, Mahogany Neck, Rosewood Fretboard, 2 Humbucker Pickups", 15, 4, 8),
+
+("Ernie Ball St. Vincent Signature", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-cf5c391ced663be1__hmac-b7846da7aea4a95ab6de1d988f9cd09e4df397a3/images/items/350/StVincentSB.jpg.auto.webp", "Black 3 Humbucker St. Vincent Signature Guitar", "electric", "Mahogany Body, Rosewood Neck, Ebony Fretboard, 3 Mini-Humbucker Pickups", 5, 11, 14),
+
+("PRS SE 245", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-b06724169d1ef5b3__hmac-a3ec75161cf295f47d398f8f02c56aa254e47991/images/items/750/SE245WB-large.jpg.auto.webp", "PRS SE 245 whale blue flame maple top", "electric", "Mahogany Body, Flame Maple Top, Mahogany Neck, Rosewood Fretboard, 2 humbucker Pickups", 10, 4, 7);
