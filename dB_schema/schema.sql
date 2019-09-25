@@ -25,7 +25,7 @@ CREATE TABLE products
              img_url VARCHAR(255),
              img_alt VARCHAR(120),
          guitar_type VARCHAR(25),
-     product_details VARCHAR(120),
+     product_details VARCHAR(170),
             quantity INT NOT NULL,
             brand_id INT,
 		    price_id INT,
@@ -46,7 +46,14 @@ CREATE TABLE contacts
 INSERT INTO contacts (firstname, lastname, email_address, user_message)
 VALUES ("John", "Deer", "jdeer@johndeer.com", "You should check out schecter guitars! They're my favorite!"),
        ("Gary", "Gills", "ggills@this.com", "Do you carry any of the SUPREME stratocasters?"),
-       ("Henry", "Fields", "hfields@that.com", "You don't have enough sales! Your guitars are too expensive!");
+       ("Henry", "Fields", "hfields@that.com", "You don't have enough sales! Your guitars are too expensive!"),
+       ("Sebastian", "Mcdougall", "smcdougall@this.com", "Will you be carrying any drums?"),
+       ("Lukas", "Olsen", "lolsen@that.com", "How long does it take to ship to Alaska?"),
+       ("Ricky", "Rubio", "rrubio@real.com", "Do you sell any ukeleles?"),
+       ("Poppy-Mae", "Beattie", "popmaebeattie@email.com", "Do you have any pink guitar?"),
+       ("Ralph", "Kenny", "rkenny@email.com", "Do you buy used guitar?"),
+       ("Leigh", "Roberson", "lroberson@email.com", "Do you have any other colors of the epiphone SL?"),
+       ("Efe", "Workman", "eworkman@this.com", "I love this store! Great service!");
 
 INSERT INTO prices (price)
 VALUES (119.99),
@@ -80,7 +87,7 @@ VALUES ("Fender", "Brad Smith", "Amazing Music Warehouse", "123 Music Street, Lo
 ("Taylor", "Theodore Steele", "Birdsong Warehouses", "2910 Maple Lane, Phoenix, Arizona"),
 ("D'angelico", "Macy Huffman", "Birdsong Warehouses", "2910 Maple Lane, Phoenix, Arizona"),
 ("Yamaha", "Russell Browning", "Extreme Speed Warehouse", "4938 Platinum Street, Las Vegas, Nevada"),
-("Ernie Ball", "Gareth Whittle", "Extreme Speed Warehouse", "4938 Platinum Street, Las Vegas, Nevada");
+("Ernie-Ball", "Gareth Whittle", "Extreme Speed Warehouse", "4938 Platinum Street, Las Vegas, Nevada");
 
 INSERT INTO products (product_name, img_url, img_alt, guitar_type, product_details, quantity, brand_id, price_id)
 VALUES ("Squier Classic Vibe Jaguar", "https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__ha-1d87d0b1b018b27a__hmac-d52ebb17c7024b6f432093b49376064c24278b12/images/items/350/JagCV70SG.jpg", "Surf Green Jaguar guitar with tortoiseshell pickguard and block inlays", "electric", "Poplar body, Maple Neck, Indian Laurel Fretboard, 2 Single Coil Pickups, Vintage Floating Tremolo", 80, 2, 4),
@@ -93,7 +100,7 @@ VALUES ("Squier Classic Vibe Jaguar", "https://media.sweetwater.com/api/i/b-orig
 
 ("Epiphone Les Paul SL", "https://media.sweetwater.com/api/i/b-original__w-300__h-450__bg-ffffff__q-85__ha-d24dc65c05a5f08a__hmac-6647d9550c6738a86da8636a6e0a0b35cf48002b/images/items/750/ENOLTQCH-large.jpg", "Light Blue Epiphone Les Paul SL", "electric", "Poplar Body, Mahogany Neck, Rosewood Fretboard, 2 Single Coil Pickups", 100, 3, 1),
 
-("Fender House Targaryen Strat", "https://images.reverb.com/image/upload/s--CGK-43tw--/f_auto,t_large/v1555647612/sdq5qkxehrl6lp05enyb.jpg", "Targaryen House themed Fender Stratocaster", "electric", "2 Piece Alder Body, Maple Neck, Ebony Fretboard, 3 Single Coil Pickups, Vintge Style Synchcronized Tremolo, Dragon Scale Carved Top, Dragon Sigil on First Fret", 2, 1, 19),
+("Fender House Targaryen Strat", "https://images.reverb.com/image/upload/s--CGK-43tw--/f_auto,t_large/v1555647612/sdq5qkxehrl6lp05enyb.jpg", "Targaryen House themed Fender Stratocaster", "electric", "2 Piece Alder Body, Maple Neck, Ebony Fretboard, 3 Single Coil Pickups, Vintage Style Synchronized Tremolo, Dragon Scale Carved Top, Dragon Sigil on First Fret", 2, 1, 19),
 
 ("D'Angelico Premier Gramercy", "https://media.musicarts.com/is/image/MMGS7/L19048000001000-00-600x600.jpg", "Brown Stain D'Angelico acoustic guitar", "acoustic", "Solid Sitka Spruce Top, Laminated Mahogany Back and Sides, Sonokeline Fretboard, Mahogany Neck, D'Angelico Preamp and Pickup", 30, 9, 5),
 
@@ -111,13 +118,13 @@ VALUES ("Squier Classic Vibe Jaguar", "https://media.sweetwater.com/api/i/b-orig
 
 ("Martin 000-17E", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-c7487a678f9c34dd__hmac-da898a5df066cc7620cedf180846e6024815dfaf/images/items/750/00017EBS-large.jpg.auto.webp", "Martin 000-17E Black Acoustic Guitar with White Pickguard", "acoustic", "Sitka Spruce Top, Mahogany Back and Sides, Hardwood Neck, Rosewood Fretboard, Martin On-board Electronics", 15, 6, 11),
 
-("Ernie Ball John Petrucci Majesty", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-de0501e83130b63b__hmac-3f7b9c8174c37a9e37afe646401a02dbb503bec2/images/items/750/JPM6DR-large.jpg.auto.webp", "Ernie Ball John Petrucci Majesty Dark Brown Flame Maple Top", "electric", "Mahogany Body, Maple Cap, Mahogany Neck, Ebony Fretboard, 2 Humbuckers and 1 Piezo Pickup, Tremolo", 8, 11, 16)
+("Ernie Ball John Petrucci Majesty", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-de0501e83130b63b__hmac-3f7b9c8174c37a9e37afe646401a02dbb503bec2/images/items/750/JPM6DR-large.jpg.auto.webp", "Ernie Ball John Petrucci Majesty Dark Brown Flame Maple Top", "electric", "Mahogany Body, Maple Cap, Mahogany Neck, Ebony Fretboard, 2 Humbuckers and 1 Piezo Pickup, Tremolo", 8, 11, 16),
 
 ("Squier Affinity Tele", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-eeb94ac921f392a0__hmac-4fb2c1716a33a50137295d6c9edbf027de42d81f/images/items/750/TeleASMAW-large.jpg.auto.webp", "Cream Colored Squier Affinity Tele", "electric", "Alder Body, Maple Neck, Maple Fretboard, 2 Single Coil Pickups", 120, 2, 3),
 
 ("Ibanez GIO GRX70QA", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-450__bg-ffffff__q-85__ha-95d82ffc377c0b87__hmac-95eda42fddb4d73f0b2a55a883dfbe4a2b46efc9/images/items/750/GRX70QATBB-large.jpg.auto.webp", "Ibanez GIO GRX70QA with a blue burst quilted maple top", "electric", "Poplar Body, Quilted Maple Top, Maple Neck, Treated Pine Fretboard, 2 Humbucker and 1 Single Coil Pickups", 60, 5, 3),
 
-("Squier Classic Vibe '72 Tele Thinline", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-4b6906dafb80478e__hmac-2bda54ebaedb8c0a5b1e1bdee229d41926a0a09f/images/items/350/TeleCV70TLN.jpg.auto.webp", "Squier Classic Vibe Tele Thinline with a natural finish", "electric", "Chambered Soft Maple Body, Maple Neck, Maple Fretboard, 2 Humbucker Pickups", 60, 2, 4)
+("Squier Classic Vibe '72 Tele Thinline", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-4b6906dafb80478e__hmac-2bda54ebaedb8c0a5b1e1bdee229d41926a0a09f/images/items/350/TeleCV70TLN.jpg.auto.webp", "Squier Classic Vibe Tele Thinline with a natural finish", "electric", "Chambered Soft Maple Body, Maple Neck, Maple Fretboard, 2 Humbucker Pickups", 60, 2, 4),
 
 ("PRS SE Mark Tremonti Singlecut", "https://media.sweetwater.com/api/i/f-webp__b-original__w-300__h-300__bg-ffffff__q-85__ha-3c30721521f5953d__hmac-649eef9a117ac28e8d00d0659699c60f9b3126df/images/items/350/SEMTGB2.jpg.auto.webp", "Black Flame Maple PRS SE Mark Tremonti Custom Singlecut", "electric", "Mahogany Body, Flame Maple Top, Mahogany Neck, Rosewood Fretboard, 2 Humbucker Pickups", 15, 4, 8),
 
