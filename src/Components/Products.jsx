@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Products from '../data/products.json'
 //This is where the products are displayed and filtered
 class ProductsPage extends Component {
   //Saving the value of options so that they can be recompared on change of another select. Products in the state so that if the page was made to a certain size and only had part of the products it would rerender if more products were loaded
@@ -10,8 +9,19 @@ class ProductsPage extends Component {
       low: 0,
       high: 50000
     },
-    products: Products
+    products: []
   }
+
+  componentDidMount() {
+    fetch('http://localhost:3001/api/products')
+    .then(res => res.json())
+    .then((data) => {
+      this.setState({ products: data })
+      console.log(data)
+    })
+    .catch(console.log)
+  }
+
 //Set state based on the name of the select and the value of the option
   handleChange = e => {    
     this.setState({
@@ -42,19 +52,22 @@ class ProductsPage extends Component {
     }
   }
 //Filter the products with .filter() saving the new array under a common variable that in the end is returned
-  filterProducts = (Products, type, brand, prices) => {
+  filterProducts = (products, type, brand, prices) => {
 
-    let filteredProducts = Products;
+    let filteredProducts = products;
+    console.log(products)
+    console.log("----------------")
+    console.log(filteredProducts)
 
     // Transform Filtered Products based on passed arguments
 
     // Types
     if(type !== "any"){
-      filteredProducts = filteredProducts.filter(product => product.type === type)
+      filteredProducts = filteredProducts.filter(product => product.guitar_type === type)
     }
     // Brands
     if(brand !== "any"){
-      filteredProducts = filteredProducts.filter(product => product.brand === brand)
+      filteredProducts = filteredProducts.filter(product => product.brand_name.toLowerCase() === brand)
     }
     // Handle Prices
     if(prices.low) {
@@ -111,7 +124,7 @@ class ProductsPage extends Component {
                   <option value="martin">Martin</option>
                   <option value="ltd">ESP/LTD</option>
                   <option value="taylor">Taylor</option>
-                  <option value="dangelico">D'Angelico</option>
+                  <option value="d'angelico">D'Angelico</option>
                   <option value="yamaha">Yamaha</option>
                   <option value="ernie-ball">Ernie Ball</option>
                 </select>
@@ -123,12 +136,12 @@ class ProductsPage extends Component {
         <div className="row products">
           {filteredProducts.length >= 1 ? (
             filteredProducts.map(product => (
-              <div key={product.id} className="col-md-11 col-lg-4 card">
-                <img src={product.imgURL} alt={product.imgAlt} className="img card-img-top"></img>
+              <div key={product.product_id} className="col-md-11 col-lg-4 card">
+                <img src={product.img_url} alt={product.img_alt} className="img card-img-top"></img>
                 <div className="card-body">
-                  <h3 className="card-header">{product.name}</h3>
+                  <h3 className="card-header">{product.product_name}</h3>
                   <p className="card-subtitle">${product.price}</p>
-                  <p className="card-text ml-3">{product.description}</p>
+                  <p className="card-text ml-3">{product.product_details}</p>
                 </div>
               </div>
             ))
