@@ -1,11 +1,20 @@
 const express = require('express')
-const app = express()
 const mysql = require('mysql')
-const cors = require('cors')
-require('dotenv').config() //Import dotenv to protect password
-const PORT = process.env.PORT || 3001
+//const cors = require('cors')
+const path = require('path')
+require('dotenv').config()
 
-app.use(cors({origin: 'http://localhost:3000'}))
+const app = express()
+const port = process.env.PORT || 3001
+
+//app.use(cors({origin: 'http://localhost:3000'}))
+// app.use(express.urlencoded({ extended: true }))
+// app.use(express.json())
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"))
+  }
+
 
 var connection = mysql.createConnection({
     //host name
@@ -25,7 +34,12 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
     if (err) throw err;
     console.log("dB connected")
-});
+})
+
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+})
 
 app.get('/api/products', (req, res) => {
     connection.query("SELECT products.product_id, brands.brand_name, products.product_name, products.product_details, products.img_url, products.img_alt, products.guitar_type, prices.price FROM products JOIN brands ON products.brand_id = brands.brand_id JOIN prices ON products.price_id = prices.price_id ORDER BY products.product_id;", (err, result) => {
@@ -56,4 +70,4 @@ app.get('*', (req, res) => {
 
 //Create endpoints
 
-app.listen(PORT, console.log("Server listening...")) 
+app.listen(port, console.log(`Server listening on port: ${port}`)) 
