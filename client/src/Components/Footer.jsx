@@ -16,7 +16,7 @@ const Footer = () => {
             <a href="https://twitter.com/Fender?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer"><img src="https://akns-images.eonline.com/eol_images/Entire_Site/201377/rs_600x600-130807142437-600.twitter2.cm.8713.jpg" alt="twitter logo" className="logo" /></a>
           </div>
           <span className="copyright">Copyright 2019</span>
-          <span className="lastUpdated">Last Updated Aug. 15th 2019</span>
+          <span className="lastUpdated">Last Updated Sep. 27th 2019</span>
         </footer>
     )
 }
