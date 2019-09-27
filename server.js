@@ -55,12 +55,52 @@ app.get('/api/contacts', (req, res) => {
     })
 })
 
-app.get('/api/productfilter/:query', (req, res) => {
-    const qryStr = req.params.query
-    connection.query(qryStr, (err, result) => {
-        if(err) console.log(err);
+app.get('/api/products/:type/:brand/:pricelow/:pricehigh', (req,res) => {
+    const type = req.params.type
+    const brand = req.params.brand
+    const priceLow = req.params.pricelow
+    const priceHigh = req.params.pricehigh
+    const ANY = "any"
+    let paramArr = []
+    let qryStr = `SELECT products.product_id, brands.brand_name AS brand, products.product_name, products.product_details, products.img_url, products.img_alt, products.guitar_type AS type, prices.price AS price FROM products JOIN brands ON products.brand_id = brands.brand_id JOIN prices ON products.price_id = prices.price_id `
+
+    let qryEnd = ""
+    if(brand!==ANY){
+        if(paramArr.length < 1){
+            qryStr = `${qryStr} WHERE  brands.brand_name = ?`
+        }
+        else{
+            qryStr = `${qryStr} && brands.brand_name = ?`
+        }
+        paramArr = [...paramArr, brand];
+    }
+    if(type!==ANY){
+        if(paramArr.length < 1){
+            qryStr = `${qryStr} WHERE products.guitar_type = ?`
+        }
+        else{
+            qryStr = `${qryStr} && products.guitar_type = ?`
+        }
+        paramArr = [...paramArr, type];
+    }
+    if(priceLow!==ANY){
+        if(paramArr.length < 1){
+            qryStr = `${qryStr} WHERE price BETWEEN ? AND ?`
+        }
+        else{
+            qryStr = `${qryStr} && price BETWEEN ? AND ?`
+        }
+        paramArr = [...paramArr, priceLow, priceHigh];
+    }
+
+    console.log(req.params)
+    console.log(qryStr)
+    console.log(paramArr)
+    connection.query(qryStr, paramArr, (err, result) => {
+        if(err) console.log(err)
         res.send(result)
     })
+    
 })
 
 app.get('*', (req, res) => {
