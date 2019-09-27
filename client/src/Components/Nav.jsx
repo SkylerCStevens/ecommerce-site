@@ -25,7 +25,7 @@ const Nav = () => {
               <NavLink exact  className="btn text-white nav-btn-middle" to="/products">Products</NavLink>
               </li>
               <li className="nav-item">
-              <NavLink exact className="btn text-white nav-btn-right" to="/contact">Contact</NavLink>
+              <NavLink exact className="btn text-white nav-btn-right" to="/contactform">Contact</NavLink>
               </li>
             </ul>
           </div>
@@ -34,7 +34,7 @@ const Nav = () => {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/products" component={ProductsPage}/>
-          <Route exact path="/contact" component={Contact}/>
+          <Route exact path="/contactform" component={Contact}/>
         </Switch>
     </BrowserRouter>
     )
