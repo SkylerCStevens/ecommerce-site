@@ -13,14 +13,25 @@ class ProductsPage extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/products')
-    .then(res => res.json())
-    .then((data) => {
-      this.setState({ products: data })
-      console.log(data)
-    })
-    .catch(console.log)
+      fetch('/api/products')
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({ products: data })
+        console.log(data)
+      })
+      .catch(console.log)
   }
+
+  componentDidUpdate(prevProps, prevState) {
+
+    if(prevState.brand !== this.state.brand || prevState.type !== this.state.type || prevState.prices.low !== this.state.prices.low || prevState.prices.high !== this.state.prices.high) {
+      fetch(`/api/products/${this.state.type}/${this.state.brand}/${this.state.prices.low}/${this.state.prices.high}`)
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({products: data})
+      })
+    }
+}
 
 //Set state based on the name of the select and the value of the option
   handleChange = e => {    
@@ -46,44 +57,44 @@ class ProductsPage extends Component {
       this.setState({
         prices: {
           low: prices[0],
-          high: false
+          high: 50000
         }
       })
     }
   }
 //Filter the products with .filter() saving the new array under a common variable that in the end is returned
-  filterProducts = (products, type, brand, prices) => {
+  // filterProducts = (products, type, brand, prices) => {
 
-    let filteredProducts = products;
+  //   let filteredProducts = products;
 
-    // Transform Filtered Products based on passed arguments
+  //   // Transform Filtered Products based on passed arguments
 
-    // Types
-    if(type !== "any"){
-      filteredProducts = filteredProducts.filter(product => product.guitar_type === type)
-    }
-    // Brands
-    if(brand !== "any"){
-      filteredProducts = filteredProducts.filter(product => product.brand_name.toLowerCase() === brand)
-    }
-    // Handle Prices
-    if(prices.low) {
-      filteredProducts = filteredProducts.filter(product => product.price >= prices.low)
-    }
-    if(prices.high) {
-      filteredProducts = filteredProducts.filter(product => product.price <= prices.high)
-    }
+  //   // Types
+  //   if(type !== "any"){
+  //     filteredProducts = filteredProducts.filter(product => product.guitar_type === type)
+  //   }
+  //   // Brands
+  //   if(brand !== "any"){
+  //     filteredProducts = filteredProducts.filter(product => product.brand_name.toLowerCase() === brand)
+  //   }
+  //   // Handle Prices
+  //   if(prices.low) {
+  //     filteredProducts = filteredProducts.filter(product => product.price >= prices.low)
+  //   }
+  //   if(prices.high) {
+  //     filteredProducts = filteredProducts.filter(product => product.price <= prices.high)
+  //   }
 
-    return filteredProducts;
-  }
+  //   return filteredProducts;
+  // }
 
   render() {
 
     // Get the products off state.
-    const { products, type, brand, prices } = this.state;
+    const { products } = this.state;
 
     // Filter Products by selection
-   const filteredProducts = this.filterProducts(products, type, brand, prices)
+  //  const filteredProducts = this.filterProducts(products, type, brand, prices)
     // Render Products
     return (
       <div className="product-container">
@@ -131,8 +142,8 @@ class ProductsPage extends Component {
           </div>
         </div>
         <div className="row products">
-          {filteredProducts.length >= 1 ? (
-            filteredProducts.map(product => (
+          {products.length >= 1 ? (
+            products.map(product => (
               <div key={product.product_id} className="product-box">
                 <img src={product.img_url} alt={product.img_alt} className="img card-img-top"></img>
                 <div className="card-body">
