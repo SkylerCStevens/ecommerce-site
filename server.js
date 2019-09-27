@@ -49,13 +49,13 @@ app.get('/api/products', (req, res) => {
 })
 
 app.get('/api/contacts', (req, res) => {
-    connection.query("SELECT * FROM contacts", (err, result) => {
+    connection.query("SELECT * FROM contacts ORDER BY contact_id", (err, result) => {
         if(err) console.log(err);
         res.send(result)
     })
 })
 
-app.get('/api/products/:type/:brand/:pricelow/:pricehigh', (req,res) => {
+app.get('/api/products/filter/:type/:brand/:pricelow/:pricehigh', (req,res) => {
     const type = req.params.type
     const brand = req.params.brand
     const priceLow = req.params.pricelow
@@ -93,9 +93,6 @@ app.get('/api/products/:type/:brand/:pricelow/:pricehigh', (req,res) => {
         paramArr = [...paramArr, priceLow, priceHigh];
     }
 
-    console.log(req.params)
-    console.log(qryStr)
-    console.log(paramArr)
     connection.query(qryStr, paramArr, (err, result) => {
         if(err) console.log(err)
         res.send(result)

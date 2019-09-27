@@ -13,7 +13,9 @@ class ProductsPage extends Component {
   }
 
   componentDidMount() {
-      fetch('/api/products')
+      fetch('/api/products', {
+        method: "GET"
+      })
       .then(res => res.json())
       .then((data) => {
         this.setState({ products: data })
@@ -25,7 +27,9 @@ class ProductsPage extends Component {
   componentDidUpdate(prevProps, prevState) {
 
     if(prevState.brand !== this.state.brand || prevState.type !== this.state.type || prevState.prices.low !== this.state.prices.low || prevState.prices.high !== this.state.prices.high) {
-      fetch(`/api/products/${this.state.type}/${this.state.brand}/${this.state.prices.low}/${this.state.prices.high}`)
+      fetch(`/api/products/filter/${this.state.type}/${this.state.brand}/${this.state.prices.low}/${this.state.prices.high}`, {
+        method: "GET"
+      })
       .then(res => res.json())
       .then((data) => {
         this.setState({products: data})
@@ -62,39 +66,12 @@ class ProductsPage extends Component {
       })
     }
   }
-//Filter the products with .filter() saving the new array under a common variable that in the end is returned
-  // filterProducts = (products, type, brand, prices) => {
-
-  //   let filteredProducts = products;
-
-  //   // Transform Filtered Products based on passed arguments
-
-  //   // Types
-  //   if(type !== "any"){
-  //     filteredProducts = filteredProducts.filter(product => product.guitar_type === type)
-  //   }
-  //   // Brands
-  //   if(brand !== "any"){
-  //     filteredProducts = filteredProducts.filter(product => product.brand_name.toLowerCase() === brand)
-  //   }
-  //   // Handle Prices
-  //   if(prices.low) {
-  //     filteredProducts = filteredProducts.filter(product => product.price >= prices.low)
-  //   }
-  //   if(prices.high) {
-  //     filteredProducts = filteredProducts.filter(product => product.price <= prices.high)
-  //   }
-
-  //   return filteredProducts;
-  // }
 
   render() {
 
     // Get the products off state.
     const { products } = this.state;
 
-    // Filter Products by selection
-  //  const filteredProducts = this.filterProducts(products, type, brand, prices)
     // Render Products
     return (
       <div className="product-container">
