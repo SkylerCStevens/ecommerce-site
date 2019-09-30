@@ -6,8 +6,8 @@ class ProductsPage extends Component {
     type: "any",
     brand: "any",
     prices: {
-      low: 0,
-      high: 50000
+      low: "any",
+      high: "any"
     },
     products: []
   }
@@ -90,11 +90,11 @@ class ProductsPage extends Component {
                 <select name="prices" className="ml-3 form-control product-select" id="guitar-price" onChange={this.changePrice}>
                   <option value="0 500000" hidden>Price:</option>
                   <option value="0 500000">Any</option>
-                  <option value="0 200">Less than $200</option>
-                  <option value="200 499">$200-$499</option>
-                  <option value="500 999">$500-$999</option>
-                  <option value="1000 2999">$1000-$2999</option>
-                  <option value="3000 5000">$3000-$5000</option>
+                  <option value="0 199.99">Less than $200</option>
+                  <option value="200 499.99">$200-$499</option>
+                  <option value="500 999.99">$500-$999</option>
+                  <option value="1000 2999.99">$1000-$2999</option>
+                  <option value="3000 5000.99">$3000-$5000</option>
                   <option value="5001">More than $5000</option>
                 </select>
 

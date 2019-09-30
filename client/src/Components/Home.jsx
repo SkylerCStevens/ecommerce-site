@@ -4,12 +4,12 @@ import AutoSlider from './AutoSlider'
 function Home() {
     return (
     <div>
-    <h1 className="text-center home-title">Welcome to Hummingbird Guitars!</h1>
+    <h1 className="page-header text-center home-title">Welcome to Hummingbird Guitars!</h1>
 
     <AutoSlider />     
 
-    <section className="container mt-3 mb-3 border-bottom">
-      <h2 className="ml-5 about-title">About Us:</h2>
+    <section className="container mt-3 mb-3 border-bottom border-top">
+      <h2 className="page-header ml-5 about-title">About Us:</h2>
       <div className="about-p">
       <p>Hummingbird Guitars was founded in 2016 with a shared passion for quality guitars. Started by Skyler Stevens and Robert M.G. in a warm garage in the Carolinas. 
       With only basic tools Skyler was taught the skill of woodworking from their grandfather Robert. After Skyler built their first guitar, they saved all their money working at the local Piggly Wiggly to buy new tools. 

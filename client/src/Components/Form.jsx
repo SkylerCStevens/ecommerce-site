@@ -11,7 +11,7 @@ const Form = () => {
 <div className="form-container column-1">
 <form className="cmxform" id="commentForm" onSubmit={handleSubmit(onSubmit)} method="get" action="#" noValidate>
 <div className="form-group">
-  <legend>Send Us a Message:</legend>
+  <legend className="page-header">Send Us a Message</legend>
   <div>
     <div className=" mt-4 ">
     <label className="contact-label top-label" htmlFor="first-name">First Name</label>
