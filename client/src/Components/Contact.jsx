@@ -21,7 +21,7 @@ class Contact extends Component {
     const { contacts } = this.state
     return (
     <div>
-    <h1 className="text-center mt-4 contact-title">Contact Us!</h1>
+    <h1 className="page-header text-center mt-4 contact-title">Contact Us!</h1>
 
       <div className="phone-address-email text-center mt-3">
       <address className="company-address">1234  Somewhere Avenue, Charlotte, NC 28211</address>
@@ -29,13 +29,14 @@ class Contact extends Component {
           <span>E-mail: info@hummingbirdguitars.com</span>
         </div>
     {/* Contact form with Name Email and comment */}
-    <h2 className="column-2">Comments</h2>
+   
     {<Form />}
     <div className="column-2">
+    <h2 className="page-header">Comments</h2>
       <ul className="mt-5 contact-list">
         {contacts.map(contact => {
           return (
-          <li className="mt-3 mr-5 mb-3 contact-list-item">
+          <li key={contact.contact_id} className="mt-3 mr-5 mb-3 contact-list-item">
             <p className="contact-name ml-1 mr-1">{contact.firstname}</p>
             <p className="contact-name ml-1 mr-1">{contact.lastname}</p>
             <p className="contact-message ml-1 mr-1">{contact.user_message}</p>
