@@ -83,7 +83,7 @@ h1,h2,h3,h4{
 	border-bottom: solid 1px gray;
 }
 legend, h2{
-	font-size: 2.3rem
+	font-size: 3rem
 }
 .copyright, .lastUpdated {
 	font-size: 12px;
@@ -129,7 +129,7 @@ legend, h2{
 	width: 75%;
 	border-radius: 1%;
 	margin: 0 auto;
-	height: 600px;
+	height: 620px;
 	overflow: hidden;
 	white-space: nowrap;
 	z-index: 0;
@@ -145,27 +145,6 @@ legend, h2{
 	display: inline-block;
 	height: 100%;
 	width: 100%;
-}
-.arrowslider {
-	display: inline-block;
-	position: relative;
-	width: 75%;
-	margin: 0 12%;
-	height: 600px;
-	overflow: hidden;
-	white-space: nowrap;
-	z-index: 0;
-}
-  
-.arrowslider-wrapper {
-	position: relative;
-	height: 100%;
-	width: 70%;
-}
-  
-.arrowslide {
-	display: inline-block;
-	width: 33%
 }
   
 .arrow {
@@ -213,7 +192,7 @@ legend, h2{
 .column-1{
 	float: left;
 	width: 50%;
-	padding: 0 2% 0 2%;
+	padding: 1% 2% 0 2%;
 }
 .column-2{
 	float: right;
@@ -241,7 +220,10 @@ legend, h2{
 	font-size: 20px;
 }
 .top-label{
-	margin-top: 8%;
+	margin-top: 7%;
+}
+.page-header{
+	text-shadow: 1px 1px gray;
 }
 footer{
 	clear: both;
