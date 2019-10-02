@@ -92,11 +92,11 @@ router.get("/products/filter/:type/:brand/:pricelow/:pricehigh", (req, res) => {
   });
 });
 
-router.post("/newcontact/:first/:last/:email/:comment", (req, res) => {
-  const firstName = req.params.first;
-  const lastName = req.params.last;
-  const email = req.params.email;
-  const comment = req.params.comment;
+router.post("/newcontact", (req, res) => {
+  const firstName = req.body.firstname;
+  const lastName = req.body.lastname;
+  const email = req.body.email;
+  const comment = req.body.comment;
   //Validate all the fields that the client should include in the new contact
   if (
     !firstName ||
