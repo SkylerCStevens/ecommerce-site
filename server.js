@@ -5,7 +5,7 @@ const morgan = require("morgan"); //Import morgan
 require("dotenv").config(); //Import dotenv.config
 
 const app = express(); //Save the object returned from express()
-const port = process.env.PORT || 3001; //Set the port variable to be equal to system defined port or 3001
+const port = process.env.PORT || 400; //Set the port variable to be equal to system defined port or 3001
 const apiRoutes = require("./routes/apiRoutes");
 
 //Prevent default powered by header for node from appearing so that hackers can't easily know what security defects to exploit
