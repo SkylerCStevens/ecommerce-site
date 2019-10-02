@@ -31,9 +31,14 @@ class Contact extends Component {
     .catch(console.log)
   }
 
-  handleSubmit = (first, last, email, comment) => {
-    fetch(`/api/newcontact/${first}/${last}/${email}/${comment}`, {
-      method: "POST"
+  handleSubmit = (data) => {
+    fetch("/api/newcontact", {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify(data)
     })
     .then(res => res.json())
     .then(contacts => this.setState({ contacts }))
@@ -69,7 +74,7 @@ class Contact extends Component {
                 return (
                   <li
                     key={contact.contact_id} 
-                    className="mt-3 mr-5 mb-3 contact-list-item"
+                    className="mt-2 mr-5 contact-list-item"
                   >
                     <button className="float-right x-button" value={contact.contact_id} onClick={(e => {
                       this.handleClick(e)
