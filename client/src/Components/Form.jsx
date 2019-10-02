@@ -6,7 +6,7 @@ const Form = (props) => {
   const { register, handleSubmit, errors, reset } = useForm();
   //logging the data from inputs
   const onSubmit = (data) => {
-    props.handleSubmit(data.firstname, data.lastname, data.email, data.comment)
+    props.handleSubmit(data)
     reset()
   }
 
@@ -24,7 +24,7 @@ const Form = (props) => {
           <legend className="page-header">Leave a Comment</legend>
 
           <div>
-            <div className="mt-4">
+            <div className="mt-3">
               <label className="contact-label top-label" htmlFor="first-name">
                 First Name
               </label>
