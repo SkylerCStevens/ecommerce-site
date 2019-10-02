@@ -1,14 +1,20 @@
 body {
   max-width: 2000px;
-  color: #343a40;
-  font-family: Helvetica, sans-serif;
-  line-height: 1.5rem;
+  color: #2b3035;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 2rem;
 }
 h1,
 h2,
 h3,
-h4 {
-  font-family: Helvetica, sans-serif;
+h4,
+.page-header,
+.nav-title,
+.nav-item,
+.no-comments,
+.card-header,
+select {
+  font-weight: 500;
 }
 .product-container {
   width: 80%;
@@ -118,7 +124,7 @@ h2 {
 /* Home Page Overlayed Title */
 .home-title {
   display: block;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   margin: 1% 7% 1%;
   z-index: 1;
 }
@@ -178,7 +184,7 @@ h2 {
   border: 1px solid gray;
   border-radius: 1%;
   list-style-type: none;
-  height: 600px;
+  height: 650px;
   overflow: scroll;
 }
 .contact-list-item {
@@ -188,6 +194,7 @@ h2 {
 }
 .no-comments{
   font-size: 50px;
+  line-height: 1;
   text-align: center;
   padding: 30% 0;
 }
@@ -225,6 +232,9 @@ footer {
 .x-button:active{
   background-color: rgb(0, 75, 75);
 }
+.nav-title{
+  padding-left: 10px;
+}
 /* Making website responsive */
 @media screen and (max-width: 1024px) {
   .no-result {
@@ -232,18 +242,19 @@ footer {
   }
   .no-comments{
     font-size: 35px;
+
   }
   .product-box {
     width: 45%;
   }
   .page-header{
-    font-size: 3rem
+    font-size: 2.8rem
   }
 }
 
 @media screen and (max-width: 860px) {
   .page-header {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: bold;
   }
   .img {
@@ -260,12 +271,13 @@ footer {
   }
   .no-comments{
     font-size: 30px;
+    text-align: left;
   }
   .product-box {
     width: 90%;
   }
   .contact-info-footer{
-    font-size:16px
+    font-size:14px
   }
   .nav-title{
     font-size: 25px;
@@ -278,11 +290,26 @@ footer {
     width: 75%;
     margin: 0 auto;
   }
+  .phone-address-email{
+    font-size: 14px;
+  }
+  .cmxform{
+    padding-bottom: 200px;
+  }
+  .contact-label, .submit{
+    font-size: 18px;
+  }
+  .form-control{
+    font-size: 14px;
+  }
+  .about-p{
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .page-header {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .nav-title{
     text-align: center;
