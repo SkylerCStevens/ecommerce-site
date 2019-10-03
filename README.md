@@ -40,7 +40,7 @@ This works thanks to Concurrently which allows React-app and the Node server to 
 
 The client folder has a proxy for localhost:4000 (the port the server is running on) so that you do not run into issues with CORS when using fetch to the server for the data. This also allows for http requests for the server can be used with React-app's localhost:3000.
 
-To be able to use the MySQL connection you will need to create a .env file with:
+To be able to use the MySQL connection you will need to create a .env file with your password for mySQL workbench. It should look like this:
 
 ```bash
 MYPASSWORD='your password here'
