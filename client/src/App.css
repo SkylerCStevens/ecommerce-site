@@ -1,7 +1,7 @@
 body {
   max-width: 2000px;
   color: #2b3035;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 2rem;
 }
 h1,
@@ -174,7 +174,7 @@ h2 {
   width: 50%;
   padding: 0 2% 0 2%;
 }
-.column-2::after{
+.column-2::after {
   clear: both;
 }
 .contact-name {
@@ -195,7 +195,7 @@ h2 {
   padding: 30px 0px 5px 0px;
   font-size: 18px;
 }
-.no-comments{
+.no-comments {
   font-size: 50px;
   line-height: 1;
   text-align: center;
@@ -220,7 +220,7 @@ footer {
   clear: both;
   padding-top: 10%;
 }
-.x-button{
+.x-button {
   padding: 1px 4px 1px 4px;
   color: gray;
   border: 1px solid gray;
@@ -228,14 +228,14 @@ footer {
   font-size: 16px;
   line-height: 1;
 }
-.x-button:hover{
+.x-button:hover {
   background-color: rgb(0, 137, 148);
   color: white;
 }
-.x-button:active{
+.x-button:active {
   background-color: rgb(0, 75, 75);
 }
-.nav-title{
+.nav-title {
   padding-left: 10px;
 }
 /* Making website responsive */
@@ -243,15 +243,14 @@ footer {
   .no-result {
     margin-left: 32%;
   }
-  .no-comments{
+  .no-comments {
     font-size: 35px;
-
   }
   .product-box {
     width: 45%;
   }
-  .page-header{
-    font-size: 2.8rem
+  .page-header {
+    font-size: 2.8rem;
   }
 }
 
@@ -267,45 +266,47 @@ footer {
   }
   .slider {
     height: 520px;
-    width: 85%
+    width: 85%;
   }
   .no-result {
     margin-left: 30%;
   }
-  .no-comments{
+  .no-comments {
     font-size: 30px;
     text-align: left;
   }
   .product-box {
     width: 90%;
   }
-  .contact-info-footer{
-    font-size:14px
+  .contact-info-footer {
+    font-size: 14px;
   }
-  .nav-title{
+  .nav-title {
     font-size: 25px;
     padding: 0;
-    margin:0;
+    margin: 0;
   }
-  .column-1, .column-2{
-    float:none;
+  .column-1,
+  .column-2 {
+    float: none;
     display: block;
     width: 75%;
     margin: 0 auto;
   }
-  .phone-address-email{
+  .phone-address-email {
     font-size: 14px;
   }
-  .cmxform{
+  .cmxform {
     padding-bottom: 200px;
   }
-  .contact-label, .submit{
+  .contact-label,
+  .submit {
     font-size: 18px;
   }
-  .form-control{
+  .form-control {
     font-size: 14px;
   }
-  .about-p{
+  .about-p {
     font-size: 14px;
   }
 }
@@ -314,7 +315,7 @@ footer {
   .page-header {
     font-size: 1.8rem;
   }
-  .nav-title{
+  .nav-title {
     text-align: center;
   }
   .img {
@@ -322,7 +323,7 @@ footer {
     height: 210px;
     margin-left: 15%;
   }
-  .slider{
+  .slider {
     width: 95%;
     height: 300px;
   }
@@ -339,7 +340,7 @@ footer {
   .no-result {
     margin-left: 25%;
   }
-  .no-comments{
+  .no-comments {
     font-size: 25px;
   }
 }

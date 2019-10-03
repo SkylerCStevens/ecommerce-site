@@ -6,7 +6,7 @@ require("dotenv").config(); //Import dotenv.config
 
 const app = express(); //Save the object returned from express()
 const port = process.env.PORT || 4000; //Set the port variable to be equal to system defined port or 3001
-const apiRoutes = require("./routes/apiRoutes");//Import the routes for api endpoints
+const apiRoutes = require("./routes/apiRoutes"); //Import the routes for api endpoints
 
 //Prevent default powered by header for node from appearing so that hackers can't easily know what security defects to exploit
 app.use(helmet.hidePoweredBy());

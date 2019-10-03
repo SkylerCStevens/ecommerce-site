@@ -9,12 +9,12 @@ const Nav = () => {
     //To use react-router-dom you have to wrap the code for the links in <BrowserRouter>
     <BrowserRouter>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <img
+        <img
           src="https://static.vecteezy.com/system/resources/previews/000/344/259/non_2x/hummingbird-logo-illustration-of-a-bird-species-violetears-colibri-flat-vector-drawing-of-an-animal-fly.jpg"
           alt="Hummingbird Logo"
           className="logo nav-logo"
         ></img>
-      <span className="navbar-brand mb-1 h1 nav-title">
+        <span className="navbar-brand mb-1 h1 nav-title">
           Hummingbird Guitars
         </span>
         <button
@@ -37,20 +37,12 @@ const Nav = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink
-                exact
-                className="btn text-white"
-                to="/products"
-              >
+              <NavLink exact className="btn text-white" to="/products">
                 Products
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink
-                exact
-                className="btn text-white"
-                to="/contactform"
-              >
+              <NavLink exact className="btn text-white" to="/contactform">
                 Contact
               </NavLink>
             </li>

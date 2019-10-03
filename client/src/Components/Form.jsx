@@ -1,14 +1,14 @@
 import React from "react";
 import useForm from "react-hook-form";
 //Component for form on contact page. Used React-Hook-Form for the validation.
-const Form = (props) => {
+const Form = props => {
   //Deconstructing the necessary parts of useForm() from react-hook-form
   const { register, handleSubmit, errors, reset } = useForm();
-  //sends data from the form back to the handleSubmit function in the Contact component then reset the form 
-  const onSubmit = (data) => {
-    props.handleSubmit(data)
-    reset()
-  }
+  //sends data from the form back to the handleSubmit function in the Contact component then reset the form
+  const onSubmit = data => {
+    props.handleSubmit(data);
+    reset();
+  };
 
   return (
     <div className="form-container column-1">

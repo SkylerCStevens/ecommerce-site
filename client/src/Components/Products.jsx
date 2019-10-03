@@ -22,7 +22,7 @@ class ProductsPage extends Component {
       })
       .catch(console.log);
   }
-//Checks if the state has changed, if it has it will fetch with a filter passing type, brand, and price through the req.params then set state with the data received back
+  //Checks if the state has changed, if it has it will fetch with a filter passing type, brand, and price through the req.params then set state with the data received back
   componentDidUpdate(prevProps, prevState) {
     if (
       prevState.brand !== this.state.brand ||

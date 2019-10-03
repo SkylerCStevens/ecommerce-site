@@ -121,7 +121,7 @@ router.post("/contacts/new", (req, res) => {
       .send(
         "You must enter a first name, last name, email and comment. Names must be at least 2 characters, email and comments must be at least 5 characters long. Names cannot be longer than 50 characters, emails cannot be longer than 100 characters and comments cannot be longer than 255 characters."
       );
-      //If it passes validation insert into the database
+    //If it passes validation insert into the database
   } else {
     connection.query(
       `INSERT INTO contacts (firstname, lastname, email_address, user_message)
@@ -179,4 +179,4 @@ router.put("/contacts/update", (req, res) => {
   );
 });
 
-module.exports = router;//Export the endpoints to be used in another file
+module.exports = router; //Export the endpoints to be used in another file

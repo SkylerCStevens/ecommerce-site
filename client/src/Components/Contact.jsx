@@ -19,33 +19,33 @@ class Contact extends Component {
       .catch(console.log);
   }
   // When the x button by the contacts is clicked perform a fetch with method DELETE and pass the contact's id as a req.params. Once this has finished parse the response and set State with the new data.
-  handleClick = (e) => {
-    const id = JSON.stringify({"id": e.target.value})
+  handleClick = e => {
+    const id = JSON.stringify({ id: e.target.value });
     fetch(`/api/contacts/delete`, {
       method: "DELETE",
-      headers: {'Content-Type': 'application/json'},
+      headers: { "Content-Type": "application/json" },
       body: id
     })
-    .then(res => res.json())
-    .then(contacts => {
-      this.setState({ contacts })
-    })
-    .catch(console.log)
-  }
+      .then(res => res.json())
+      .then(contacts => {
+        this.setState({ contacts });
+      })
+      .catch(console.log);
+  };
 
   //When the form is submitted fetch with a POST method sending back the data from the form in the body of the request then parse the data sent back and set the state with the new data
-  handleSubmit = (data) => {
+  handleSubmit = data => {
     fetch("/api/contacts/new", {
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        Accept: "application/json",
+        "Content-Type": "application/json"
       },
       method: "POST",
       body: JSON.stringify(data)
     })
-    .then(res => res.json())
-    .then(contacts => this.setState({ contacts }))
-  }
+      .then(res => res.json())
+      .then(contacts => this.setState({ contacts }));
+  };
 
   render() {
     //Deconstruct this.state.contacts
@@ -76,12 +76,18 @@ class Contact extends Component {
               contacts.map(contact => {
                 return (
                   <li
-                    key={contact.contact_id} 
+                    key={contact.contact_id}
                     className="mt-2 mr-5 contact-list-item"
                   >
-                    <button className="float-right x-button" value={contact.contact_id} onClick={(e => {
-                      this.handleClick(e)
-                    })}>x</button> 
+                    <button
+                      className="float-right x-button"
+                      value={contact.contact_id}
+                      onClick={e => {
+                        this.handleClick(e);
+                      }}
+                    >
+                      x
+                    </button>
                     <p className="contact-name ml-1 mr-1">
                       {contact.firstname}
                     </p>
