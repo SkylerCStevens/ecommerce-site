@@ -95,7 +95,7 @@ router.get("/products/filter/:type/:brand/:pricelow/:pricehigh", (req, res) => {
 //Save new contact from the comment form to database
 //http://localhost:4000/api/contacts/new
 router.post("/contacts/new", (req, res) => {
-  //Assign the req.body elements to variables to decrease length
+  //Assign the req.body elements received from contact form to variables to decrease length
   const firstName = req.body.firstname;
   const lastName = req.body.lastname;
   const email = req.body.email;
@@ -178,5 +178,22 @@ router.put("/contacts/update", (req, res) => {
     }
   );
 });
+
+//Calculates the total price of an order when given a product id and quantity. Adds a flat rate 8% tax.
+//http://localhost:4000/api/products/invoice/3/5
+router.get("/products/invoice/:id/:quantity", (req, res) => {
+  const id = req.params.id
+  const quantity = parseInt(req.params.quantity)
+  connection.query("SELECT price, product_name FROM products JOIN prices ON products.price_id = prices.price_id WHERE products.product_id = ?", [id], (err, response) => {
+    const price = parseInt(response[0].price)
+    const total = (price * quantity) * 1.08
+    const message = {}
+    message.name = response[0].product_name
+    message.price = price
+    message.quantity = quantity
+    message.total = total
+    res.send(message)
+  })
+})
 
 module.exports = router; //Export the endpoints to be used in another file
