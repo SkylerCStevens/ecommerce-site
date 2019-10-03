@@ -49,6 +49,7 @@ class ProductsPage extends Component {
       [e.target.name]: e.target.value
     });
   };
+
   //Get the price and send it to parsePrice
   changePrice = e => {
     this.parsePrice(e.target.value);
@@ -76,7 +77,6 @@ class ProductsPage extends Component {
   render() {
     // Get the products off state.
     const { products } = this.state;
-
     // Render Products
     return (
       <div className="product-container">
