@@ -37,8 +37,8 @@ CREATE TABLE products
 CREATE TABLE contacts
 (
        contact_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-        firstname VARCHAR(100) NOT NULL,
-         lastname VARCHAR(100) NOT NULL,
+        firstname VARCHAR(50) NOT NULL,
+         lastname VARCHAR(50) NOT NULL,
     email_address VARCHAR(100) NOT NULL,
      user_message VARCHAR(255) NOT NULL
 );
