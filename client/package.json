@@ -10,7 +10,7 @@
     "eject": "react-scripts eject"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
