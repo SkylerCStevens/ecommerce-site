@@ -135,14 +135,35 @@ router.post("/newcontact", (req, res) => {
   }
 });
 
-router.delete("/deletecontact/:id", (req, res) => {
-    const id = req.params.id
+router.delete("/contact/delete/:id", (req, res) => {
+  const id = req.params.id;
   connection.query(
     `DELETE FROM contacts WHERE contact_id = ${id}`,
     (err, response) => {
       if (err) console.log(err);
-      connection.query("SELECT * FROM contacts ORDER BY contact_id DESC", (err, result) => {
-        if(err) console.log(err);
+      connection.query(
+        "SELECT * FROM contacts ORDER BY contact_id DESC",
+        (err, result) => {
+          if (err) console.log(err);
+          res.send(result);
+        }
+      );
+    }
+  );
+});
+
+router.put("/contact/update/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const firstName = req.body.firstname;
+  const lastName = req.body.lastname;
+  const comment = req.body.comment;
+
+  connection.query(
+    "UPDATE contacts SET firstname = ?, lastname = ?, user_message = ? WHERE contact_id = ?",
+    [firstName, lastName, comment, id],
+    (err, response) => {
+      if (err) console.log(err);
+      connection.query("SELECT * FROM contacts", (err, result) => {
         res.send(result);
       });
     }
