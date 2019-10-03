@@ -5,6 +5,7 @@ const Footer = () => {
     <footer>
       <div className="text-center mt-5">
         <div className="contact-info-footer">
+          {/* Company name and address */}
           <p className="company-name">Hummingbird Guitars Inc.</p>
 
           <address className="company-address">
@@ -12,6 +13,7 @@ const Footer = () => {
           </address>
           <span className="phone-number mb-2">Phone: (123)345-5678</span>
         </div>
+        {/* Icons for social media linked to Fender social media pages */}
         <a
           href="https://www.facebook.com/Fender/"
           target="_blank"
@@ -48,6 +50,7 @@ const Footer = () => {
           />
         </a>
       </div>
+      {/* Copyright and lastUpdated text displayed in the corners of the page */}
       <span className="copyright">Copyright 2019</span>
       <span className="lastUpdated">Last Updated Sep. 27th 2019</span>
     </footer>

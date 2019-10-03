@@ -4,7 +4,7 @@ import useForm from "react-hook-form";
 const Form = (props) => {
   //Deconstructing the necessary parts of useForm() from react-hook-form
   const { register, handleSubmit, errors, reset } = useForm();
-  //logging the data from inputs
+  //sends data from the form back to the handleSubmit function in the Contact component then reset the form 
   const onSubmit = (data) => {
     props.handleSubmit(data)
     reset()

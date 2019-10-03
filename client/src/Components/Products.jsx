@@ -11,7 +11,7 @@ class ProductsPage extends Component {
     },
     products: []
   };
-
+  //GET all the products from database and set state with the data
   componentDidMount() {
     fetch("/api/products", {
       method: "GET"
@@ -22,7 +22,7 @@ class ProductsPage extends Component {
       })
       .catch(console.log);
   }
-
+//Checks if the state has changed, if it has it will fetch with a filter passing type, brand, and price through the req.params then set state with the data received back
   componentDidUpdate(prevProps, prevState) {
     if (
       prevState.brand !== this.state.brand ||
@@ -53,7 +53,7 @@ class ProductsPage extends Component {
   changePrice = e => {
     this.parsePrice(e.target.value);
   };
-  //Parse the value of price and set state with the two different numbers checking if there is a high by checking the length of of the array with the numbers. If it is less than one then there is no high price and that doesn't need to be compared later so it is set to false
+  //Parse the value of price and set state with the two different numbers checking if there is a high by checking the length of of the array with the numbers. If it is less than one then there is no high price and it is set to 500000 so that all guitars will be less than the high price
   parsePrice = value => {
     let prices = value.split(" ");
     if (prices.length > 1) {
@@ -67,7 +67,7 @@ class ProductsPage extends Component {
       this.setState({
         prices: {
           low: prices[0],
-          high: 50000
+          high: 500000
         }
       });
     }

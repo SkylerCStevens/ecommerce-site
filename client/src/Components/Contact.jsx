@@ -18,11 +18,13 @@ class Contact extends Component {
       })
       .catch(console.log);
   }
-
+  // When the x button by the contacts is clicked perform a fetch with method DELETE and pass the contact's id as a req.params. Once this has finished parse the response and set State with the new data.
   handleClick = (e) => {
-    const id = e.target.value
-    fetch(`/api/deletecontact/${id}`, {
-      method: "DELETE"
+    const id = JSON.stringify({"id": e.target.value})
+    fetch(`/api/contacts/delete`, {
+      method: "DELETE",
+      headers: {'Content-Type': 'application/json'},
+      body: id
     })
     .then(res => res.json())
     .then(contacts => {
@@ -31,8 +33,9 @@ class Contact extends Component {
     .catch(console.log)
   }
 
+  //When the form is submitted fetch with a POST method sending back the data from the form in the body of the request then parse the data sent back and set the state with the new data
   handleSubmit = (data) => {
-    fetch("/api/newcontact", {
+    fetch("/api/contacts/new", {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -62,7 +65,7 @@ class Contact extends Component {
           <span>E-mail: info@hummingbirdguitars.com</span>
         </div>
 
-        {/* Contact form with Name Email and comment */}
+        {/* Contact form with Name Email and comment passing props for submit to get back data from form*/}
         {<Form handleSubmit={this.handleSubmit} />}
 
         <div className="column-2">

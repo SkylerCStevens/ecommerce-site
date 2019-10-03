@@ -7,7 +7,7 @@ function Home() {
       <h1 className="page-header text-center home-title">
         Welcome to Hummingbird Guitars!
       </h1>
-
+    {/* Component for home page automatic slider */}
       <AutoSlider />
 
       <section className="container mt-3 mb-3 border-bottom border-top">

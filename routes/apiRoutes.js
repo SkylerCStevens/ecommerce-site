@@ -26,7 +26,7 @@ connection.connect(function(err) {
 });
 
 //Execute a query to get all the info needed from the tables to have brand and price included with product info
-//http://localhost:3000/api/products
+//http://localhost:4000/api/products
 router.get("/products", (req, res) => {
   connection.query(
     "SELECT products.product_id, brands.brand_name, products.product_name, products.product_details, products.img_url, products.img_alt, products.guitar_type, prices.price FROM products JOIN brands ON products.brand_id = brands.brand_id JOIN prices ON products.price_id = prices.price_id ORDER BY products.product_id;",
@@ -38,7 +38,7 @@ router.get("/products", (req, res) => {
 });
 
 //Execute a query to get all the data from the contacts table
-//http://localhost:3000/contacts
+//http://localhost:4000/contacts
 router.get("/contacts", (req, res) => {
   connection.query(
     "SELECT * FROM contacts ORDER BY contact_id DESC",
@@ -49,7 +49,7 @@ router.get("/contacts", (req, res) => {
   );
 });
 
-//http://localhost:3000/api/products/filter/electric/fender/900/1000
+//http://localhost:4000/api/products/filter/electric/fender/900/1000
 router.get("/products/filter/:type/:brand/:pricelow/:pricehigh", (req, res) => {
   const type = req.params.type; //define req.params.type passed through url as type
   const brand = req.params.brand; //define req.params.brand passed through url as brand
@@ -92,12 +92,15 @@ router.get("/products/filter/:type/:brand/:pricelow/:pricehigh", (req, res) => {
   });
 });
 
-router.post("/newcontact", (req, res) => {
+//Save new contact from the comment form to database
+//http://localhost:4000/api/contacts/new
+router.post("/contacts/new", (req, res) => {
+  //Assign the req.body elements to variables to decrease length
   const firstName = req.body.firstname;
   const lastName = req.body.lastname;
   const email = req.body.email;
   const comment = req.body.comment;
-  //Validate all the fields that the client should include in the new contact
+  //Backup backend validation for all the fields that the client should include in the new contact
   if (
     !firstName ||
     firstName.length < 2 ||
@@ -112,11 +115,13 @@ router.post("/newcontact", (req, res) => {
     comment.length < 5 ||
     comment.length > 255
   ) {
+    //If anything fails validation it sends a 400 status
     return res
       .status(400)
       .send(
         "You must enter a first name, last name, email and comment. Names must be at least 2 characters, email and comments must be at least 5 characters long. Names cannot be longer than 50 characters, emails cannot be longer than 100 characters and comments cannot be longer than 255 characters."
       );
+      //If it passes validation insert into the database
   } else {
     connection.query(
       `INSERT INTO contacts (firstname, lastname, email_address, user_message)
@@ -135,8 +140,10 @@ router.post("/newcontact", (req, res) => {
   }
 });
 
-router.delete("/contact/delete/:id", (req, res) => {
-  const id = req.params.id;
+//Delete contacts based on the contact_id which is sent from the reac-app on click of x button
+//http://localhost:4000/api/contacts/delete
+router.delete("/contacts/delete", (req, res) => {
+  const id = req.body.id;
   connection.query(
     `DELETE FROM contacts WHERE contact_id = ${id}`,
     (err, response) => {
@@ -152,8 +159,10 @@ router.delete("/contact/delete/:id", (req, res) => {
   );
 });
 
-router.put("/contact/update/:id", (req, res) => {
-  const id = parseInt(req.params.id);
+//Update contact info based on contact_id
+//http://localhost:4000/api/contacts/update
+router.put("/contacts/update", (req, res) => {
+  const id = req.body.id;
   const firstName = req.body.firstname;
   const lastName = req.body.lastname;
   const comment = req.body.comment;
@@ -170,4 +179,4 @@ router.put("/contact/update/:id", (req, res) => {
   );
 });
 
-module.exports = router;
+module.exports = router;//Export the endpoints to be used in another file
