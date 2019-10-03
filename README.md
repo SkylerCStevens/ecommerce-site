@@ -38,7 +38,7 @@ npm start dev
 
 This works thanks to Concurrently which allows React-app and the Node server to run at once in one terminal window.
 
-The client folder has a proxy for localhost:4000 (the port the server is running on) so that you do not run into issues with CORS when using fetch to the server for the data. This also allows for http requests for the server can be used with REact-app's localhost:3000.
+The client folder has a proxy for localhost:4000 (the port the server is running on) so that you do not run into issues with CORS when using fetch to the server for the data. This also allows for http requests for the server can be used with React-app's localhost:3000.
 
 ## Contributing
 This is currently a personal project. If you encounter any issues feel free to open an issue for this repo, and I will try to address it. Feel free to clone this repo and modify it for yourself.
