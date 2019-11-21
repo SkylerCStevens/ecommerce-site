@@ -13,6 +13,20 @@ Hummingbird Guitars E-commerce project is a work to show the workings of ReactJS
 
 All the pages are made to be responsive from computer screens to small mobile screens. This is made possible with both bootstrap and media queries.
 
+## Pages
+
+### Home
+
+![Home](./images/home.png)
+
+### Products
+
+![Products](./images/products.png)
+
+### Contact
+
+![Contact](./images/contacts.png)
+
 ## Getting Started
 
 When starting the project execute 
